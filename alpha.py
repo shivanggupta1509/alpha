@@ -8,7 +8,7 @@ api_id = '28400734'
 api_hash = '9db8ca267f73280bac4672dbb60d16ea'
 phone_number = '+917069804816'
 file_path = 'data.txt'
-group_usernames = ['AlphaCheckerBot']
+group_usernames = ['SAVAGECHECKBOT']
 approved_messages = set()
 client = TelegramClient('session_name', api_id, api_hash)
 cmd_file = 'cmds.txt'
@@ -185,7 +185,7 @@ async def handle_stop(event):
 async def forward_approved_messages(event):
     sender = await event.get_sender()
 
-    if sender.username == 'AlphaCheckerBot' and event.is_private:
+    if sender.username == 'SAVAGECHECKBOT' and event.is_private:
         if 'Approved' in event.message.text:
             if event.id not in approved_messages:
                 print("Message contains 'approved'. Forwarding...")
